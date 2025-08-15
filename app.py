@@ -1,6 +1,11 @@
 from flask import Flask, jsonify
 from models import setup_db
 from auth import AuthError
+from flask_jwt_extended import JWTManager
+from flask_cors import CORS
+from routes import requires_auth
+from models import Movie, Actor
+import os
 
 # Create the app first
 app = Flask(__name__)
