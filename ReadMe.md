@@ -2,8 +2,7 @@
 
 The Casting Agency API is deployed and accessible at:
 
-https://casting-agency-api.onrender.com
-
+https://udacity-casting-agency-lj4k.onrender.com/
 
 All endpoints are secured via Auth0 RBAC and require a valid JWT.
 
