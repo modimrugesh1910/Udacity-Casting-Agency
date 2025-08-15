@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: casting-agency-api
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: USE_AUTH0
+        value: true
+      - key: AUTH0_DOMAIN
+        value: your-auth0-domain.auth0.com
+      - key: API_AUDIENCE
+        value: casting
