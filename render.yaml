@@ -4,10 +4,14 @@ services:
     env: python
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn app:app
+    runtime: python
+    region: oregon  # Optional: choose the closest region
     envVars:
       - key: USE_AUTH0
         value: true
       - key: AUTH0_DOMAIN
-        value: your-auth0-domain.auth0.com
+        value: dev-awp6mkwgqzczsw4w.us.auth0.com
       - key: API_AUDIENCE
-        value: casting
+        value: dev
+      - key: DATABASE_URL
+        value: postgresql+psycopg://render:373qqw8MuJ2ZPktuvauXa2bYgDSYbgkk@dpg-d2fml96r433s73bilg90-a/agency_a88k

@@ -4,7 +4,7 @@ import os
 db = SQLAlchemy()
 
 # For deployment use DATABASE_URL or default to local
-database_path = os.getenv("DATABASE_URL", "postgresql://postgres:abcdefgh@localhost:5432/agency")
+database_path = os.getenv("DATABASE_URL", "postgresql+psycopg://postgres:abcdefgh@localhost:5432/agency")
 
 def setup_db(app, database_uri=database_path):
     app.config["SQLALCHEMY_DATABASE_URI"] = database_uri
