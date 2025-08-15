@@ -121,3 +121,5 @@ def requires_auth(permission=''):
             return f(*args, **kwargs)
         return wrapper
     return decorator
+
+
